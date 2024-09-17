@@ -45,7 +45,7 @@
   font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -53,6 +53,56 @@
   padding: 80px;
   text-align: center;
 }
+
+.containerpt {
+  position: relative;
+  width: 100%;
+}
+
+.imagept {
+  display: block;
+  width: 1920px;
+  height: 500px;
+}
+
+.overlaypt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.containerpt:hover .overlaypt {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.textpt {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
           </style>
 </head>
 <body>
@@ -69,24 +119,24 @@
                     <span class="icon-bar"></span>
                 </button>
     
-                    <a href=".html"><img class="..." src="" width="70" height="50" alt=""></a>
+                    <a href=".html"><img class="..." src="pt.png" width="70" height="50" alt=""></a>
     
               </div>
     
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     
                 <ul class="nav navbar-nav">
-                    <a class="navbar-brand" href="PontosTuristicos.html" style="padding-top: 25px;"><h4>Pontos Turísticos</h4></a>
+                    <a class="navbar-brand" href="PontosTuristicos.html" style="padding-top: 10px; margin-left: 100px;"><h4>Pontos Turísticos</h4></a>
     
-                    <a class="navbar-brand" href=".html" style="padding-top: 25px;"><h4>Acomodações</h4></a>
+                    <a class="navbar-brand" href=".html" style="padding-top: 10px; margin-left: 100px;"><h4>Acomodações</h4></a>
     
-                    <a class="navbar-brand" href=".html" style="padding-top: 25px;"><h4>Refeitório e Pscina</h4></a>
+                    <a class="navbar-brand" href=".html" style="padding-top: 10px; margin-left: 100px;"><h4>Refeitório e Pscina</h4></a>
     
-                    <a class="navbar-brand" href=".html" style="padding-top: 25px;"><h4>Área Recreativa</h4></a>
+                    <a class="navbar-brand" href=".html" style="padding-top: 10px; margin-left: 100px;"><h4>Área Recreativa</h4></a>
     
-                    <a class="navbar-brand" href=".html" style="padding-top: 25px;"><h4>Pacotes Promocionais</h4></a>
+                    <a class="navbar-brand" href=".html" style="padding-top: 10px; margin-left: 100px;"><h4>Pacotes Promocionais</h4></a>
     
-                    <a class="navbar-brand" href=".html" style="padding-top: 25px;"><h4>Fale Conosco</h4></a>
+                    <a class="navbar-brand" href=".html" style="padding-top: 10px; margin-left: 100px;"><h4>Fale Conosco</h4></a>
                 </ul>
             </div>
             </div>
@@ -162,10 +212,36 @@
 <div class="bg-text">
   <h1 style="font-size:50px">Pontos Turísticos</h1>
 </div>
-
-
-
-          <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+<!-- Início das imagens de turismo-->
+<h2 style="margin-left: 40%; color: green";>Igreja Matriz São Pedro Apóstolo</h2>
+<div class="containerpt">
+  <img src="https://imgmd.net/images/c_limit%2Cw_1600/v1/guia/1704905/paroquia-sao-pedro-matriz-de-gramado-7-42-l.jpg" alt="Igreja Matriz São Pedro Apóstolo" class="imagept">
+  <div class="overlaypt">
+    <div class="textpt">Hello World</div>
+  </div>
+</div>
+<h2 style="margin-left: 45%; color: orange;">Vinícola Ravanello</h2>
+<div class="containerpt">
+  <img src="https://cdn.api.wine-locals.com/guide/images/ravanello_tasting_4_a40cb1d226.jpg" alt="Vinícola Ravanello" class="imagept">
+  <div class="overlaypt">
+    <div class="textpt">Hello World</div>
+  </div>
+</div>
+<h2 style="margin-left: 47%; color: lightblue;">Snowland</h2>
+<div class="containerpt">
+  <img src="https://snowland.com.br/media/msg777000-482790.jpg-d9b44204b5e13427278c86ab9ff0ae64-desktop.webp" alt="Snowland" class="imagept">
+  <div class="overlaypt">
+    <div class="textpt">Hello World</div>
+  </div>
+</div>
+<h2 style="margin-left: 47%; color:  red;">Mini Mundo</h2>
+<div class="containerpt">
+  <img src="https://minimundo.com.br/wp-content/uploads/2022/08/Capa-2.jpeg" alt="Mini Mund" class="imagept">
+  <div class="overlaypt">
+    <div class="textpt">Hello World</div>
+  </div>
+</div>
+         <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Última versão JavaScript compilada e minificada -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
