@@ -1,14 +1,221 @@
-.titulospt{
-    background-color: lightgreen;
-    color: darkgreen;
-    border: solid 3px;
-    border-color: #000000;
-    border-radius: 2px;
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
+:root {
+    --bg-default: #f3f3f3cc;
+    --primary-color: rgb(0, 113, 158);
+    --accent-primary-color: rgb(0, 169, 236);
+    --secundary-color: rgb(248, 150, 2);
+    --accent-secundary-color: rgb(245, 188, 3);
+    --text-color: #0c0c0c;
+}
+
+.container-fluid {
+    background-color: var(--bg-default);
+    color: var(--primary-color);
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    -webkit-box-shadow: -2px 3px 28px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 3px 28px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 3px 28px -10px rgba(0, 0, 0, 0.75); 
+}
+
+.navbar {
+    background-color: #303030cc;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 9px 9px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#logo {
+    width: 10%;
+    padding: 10px;
+}
+
+.navbar-inverse {
+    background-color: var(--bg-default);
+    border-color: transparent;
+}
+
+.navbar-inverse .navbar-brand {
+    color: var(--text-color);
+}
+
+.navbar-header {
+    display: none;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #27272775;
+    transition: 0.5s;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #525252;
+}
+
+div#logo-header {
+    width: 10%;
+}
+
+.footer {
+    padding: 50px 0 50px 0;
+    background-color: rgb(0, 34, 48);
+    color: #fff;
+    position: relative; 
+    display: flex;
+    min-height: 100vh;
+}
+
+#newsletter {
+    color: var(--primary-color);
+    padding: 5px;
+}
+
+#submit-newsletter {
+    color: var(--primary-color);
+    padding: 5px;
+}
+
+.container-logo-footer {
+    padding: 25px 15px 0px 0px;
+}
+
+.container-logo-footer>img {
+    width: 10%;
+}
+
+.description-footer {
+    padding-right: 50px;
+    text-align: justify;
+}
+
+#logo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-header>img {
+    padding: 10px;
+    width: 10%;
+}
+
+.navbar-header {
+    width: 75%;
+}
+
+.search {
+    width: 50%;
+}
+
+.search>input {
     width: 100%;
+}
+
+.sociais>i {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.sociais {
+    display: flex;
+    align-items: center;
     height: 50px;
 }
+
+div#logo-header {
+    width: 100%;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.sociais-footer > i {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.logo-footer {
+    width: 10%;
+}
+
+@media screen and (max-width: 1150px) {
+    .sociais {
+        display: none;
+    }
+
+    .container-fluid {
+        display: block;
+    }
+
+    #logo {
+        width: 25%;
+    }
+
+    .navbar-header {
+        display: inline-flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    button.navbar-toggle {
+        border: none;
+        color: #000;
+    }
+
+    button.navbar-toggle:hover {
+        border: none;
+        background-color: rgba(0, 0, 0, 0)
+    }
+
+    .navbar-inverse .navbar-toggle .icon-bar {
+        background-color: var(--primary-color);
+    }
+
+    #btn-mobile:hover{
+        background-color: transparent;
+    }
+
+    #btn-mobile {
+        background-color: #f8f8f8;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .description-footer {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .logo-footer {
+        width: 35%;
+    }
+}
+/* inicio do ponto turistico*/
 
 *{
     margin: 0;
@@ -18,21 +225,22 @@
 
 body{
     background: #eaeaea;
-    overflow: hidden;
+
 }
 
-.container{
+.containerp{
     position: absolute;
-    top: 57%;
+    margin-top: 125px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1850px;
-    height: 750px;
+    width: 100%;
+    height: 865px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
 }
 
-.container .slide .item{
+.containerp .slidep .itemp{
     width: 200px;
     height: 300px;
     position: absolute;
@@ -46,8 +254,8 @@ body{
     transition: 0.5s;
 }
 
-.slide .item:nth-child(1),
-.slide .item:nth-child(2){
+.slidep .itemp:nth-child(1),
+.slidep .itemp:nth-child(2){
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -57,50 +265,49 @@ body{
 }
 
 
-.slide .item:nth-child(3){
+.slidep .itemp:nth-child(3){
     left: 50%;
 }
-.slide .item:nth-child(4){
+.slidep .itemp:nth-child(4){
     left: calc(50% + 220px);
 }
-.slide .item:nth-child(5){
+.slidep .itemp:nth-child(5){
     left: calc(50% + 440px);
 }
 
-/* here n = 0, 1, 2, 3,... */
-.slide .item:nth-child(n + 6){
+.slidep .itemp:nth-child(n + 6){
     left: calc(50% + 660px);
     opacity: 0;
 }
 
 
 
-.item .content{
+.itemp .contentp{
     position: absolute;
     top: 50%;
     left: 100px;
     width: 300px;
     text-align: left;
-    color: #ffffff;
+    color: #eee;
     transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
 }
 
-    .content button:hover {
-        color: #FFFFFF; /* White */
-        background-color: #FF8C00; /* Dark orange */
+    .contentp button:hover {
+        color: #FFFFFF; 
+        background-color: #FF8C00; 
     }
 
 
 
 
-.slide .item:nth-child(2) .content{
+.slidep .itemp:nth-child(2) .contentp{
     display: block;
 }
 
 
-.content .name{
+.contentp .namep{
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
@@ -108,14 +315,14 @@ body{
     animation: animate 1s ease-in-out 1 forwards;
 }
 
-.content .des{
+.contentp .desp{
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
-.content button{
+.contentp button{
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -140,27 +347,30 @@ body{
 
 
 
-.button{
+.buttonp{
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 20px;
 }
 
-.button button{
+.buttonp button{
     width: 40px;
     height: 35px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     margin: 0 5px;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     transition: 0.3s;
 }
 
-.button button:hover{
-    background: #FF8C00;
-    color: #FFFFFF;
+.buttonp button:hover{
+    background: #ababab;
+    color: #fff;
 }
 
-
+.main{
+display: flex;
+height: 100vh;
+}

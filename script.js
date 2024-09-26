@@ -1,12 +1,23 @@
-let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+let items = document.querySelectorAll('.itemp');
+let currentIndex = 0;
 
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-})
+function showItem(index) {
+    items.forEach((item, i) => {
+        item.style.display = (i === index) ? 'block' : 'none';
+    });
+}
 
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
-})
+next.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % items.length;
+    showItem(currentIndex);
+});
+
+prev.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showItem(currentIndex);
+});
+
+// Inicializa mostrando o primeiro item
+showItem(currentIndex);

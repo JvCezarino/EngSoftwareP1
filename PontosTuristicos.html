@@ -1,81 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
- 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PontosTuristicos</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pontos Turísticos</title>
 
-</head>
-
-        <style></style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+            crossorigin="anonymous"></script>
+            <script src="script.js"></script>
 </head>
 <body>
-  
-<!--div titulo-->
-<div>
-    <h2 class="titulospt">Pontos Turisticos</h2>
-</div>
-<!--inicio do ponto turistico-->
-<div class="container">
-    <div class="slide">
-        <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
-            <div class="content">
-                <div class="name">Switzerland</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
-            <div class="content">
-                <div class="name">Finland</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
-            <div class="content">
-                <div class="name">Iceland</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
-            <div class="content">
-                <div class="name">Australia</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
-            <div class="content">
-                <div class="name">Netherlands</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
-            <div class="content">
-                <div class="name">Ireland</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
-            </div>
-        </div>
-    </div>
 
-    <div class="button">
-        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+<!--header-->
+<header class="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <img src="https://raw.githubusercontent.com/matheushssilvaa/engenharia-software/refs/heads/main/img/logo%20png%20preta.png?token=GHSAT0AAAAAACWNLPRHS3LAEWY26GABE4CWZXUR7YQ" 
+                 id="logo" alt="logo" />
+            <div class="navbar-header">
+                <button type="button" id="btn-mobile" class="navbar-toggle" data-toggle="collapse" 
+                        data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Início</a></li>
+                    <li><a href="#">Pontos Turísticos</a></li>
+                    <li><a href="#">Acomodações</a></li>
+                    <li><a href="#">Refeitório e Piscina</a></li>
+                    <li><a href="#">Área Recreativa</a></li>
+                    <li><a href="#">Pacotes Promocionais</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                </ul>
+                <div class="sociais">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-solid fa-map-pin"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--inicio do ponto turistico-->
+<div class="main">
+    <div class="containerp">
+        <div class="slidep">
+            <div class="itemp" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+                <div class="contentp">
+                    <div class="namep">Switzerland</div>
+                    <div class="desp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="itemp" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+                <div class="contentp">
+                    <div class="namep">Finland</div>
+                    <div class="desp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="itemp" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
+                <div class="contentp">
+                    <div class="namep">Iceland</div>
+                    <div class="desp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="itemp" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+                <div class="contentp">
+                    <div class="namep">Australia</div>
+                    <div class="desp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="itemp" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+                <div class="contentp">
+                    <div class="namep">Netherlands</div>
+                    <div class="desp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="itemp" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                <div class="contentp">
+                    <div class="namep">Ireland</div>
+                    <div class="desp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="buttonp">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
     </div>
 </div>
 <!--fim do ponto turistico-->
-<script src="script.js"></script>
-          <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Última versão JavaScript compilada e minificada -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!--footer-->
+<footer class="footer">
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/matheushssilvaa/engenharia-software/refs/heads/main/img/logo%20png%20branca.png?token=GHSAT0AAAAAACWNLPRGRLXBLYMKK4RGJGGYZXUR7CQ" 
+             class="logo-footer" alt="logo-footer" />
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Quem Somos</h2>
+                <p class="description-footer">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Menu</h2>
+                <ul>
+                    <li>Pontos Turísticos</li>
+                    <li>Acomodações</li>
+                    <li>Refeitório e Piscina</li>
+                    <li>Área Recreativa</li>
+                    <li>Pacotes Promocionais</li>
+                    <li>Fale Conosco</li>
+                    <li>Quem somos</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>Endereço</h2>
+                <p>Localidade: Gramado - RS</p>
+                <p>Telefone: (XX) XXXXX-XXXX</p>
+                <p>Email: contato@turistica.com.br</p>
+                <h3>Newsletter</h3>
+                <input type="email" name="email" id="newsletter" placeholder="Seu email aqui..." />
+                <input type="submit" value="Enviar" id="submit-newsletter" />
+                <div class="sociais-footer">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-solid fa-map-pin"></i>
+                </div>
+            </div>
+        </div>
+        <span>© Turistica - todos os direitos reservados 2024</span>
+    </div>
+</footer>
 </body>
 </html>
